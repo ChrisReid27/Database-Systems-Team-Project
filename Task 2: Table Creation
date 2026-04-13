@@ -5,10 +5,46 @@
 PRAGMA foreign_keys = ON;
 
 -- 1. PROFESSOR
--- One and only one professor can teach one or many courses.
 CREATE TABLE IF NOT EXISTS Professor (
     professor_id  INTEGER PRIMARY KEY AUTOINCREMENT,
     first_name    TEXT    NOT NULL,
     last_name     TEXT    NOT NULL,
     department    TEXT    NOT NULL
+);
+
+-- 2. COURSES
+CREATE TABLE IF NOT EXISTS Course (
+    course_id       INTEGER PRIMARY KEY AUTOINCREMENT,
+    department      TEXT    NOT NULL,
+    course_number   TEXT    NOT NULL,
+    course_name     TEXT    NOT NULL,
+    semester        TEXT    NOT NULL CHECK(semester IN ('Spring','Summer','Fall')),
+    year            INTEGER NOT NULL,
+    professor_id    INTEGER NOT NULL REFERENCES Professor(professor_id),
+    UNIQUE(department, course_number, semester, year)
+);
+
+-- 3. STUDENTS
+CREATE TABLE IF NOT EXISTS Student (
+    student_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name  TEXT NOT NULL,
+    last_name   TEXT NOT NULL,
+    email       TEXT UNIQUE NOT NULL
+);
+
+-- 4. ENROLLMENTS (
+CREATE TABLE IF NOT EXISTS Enrollment (
+    enrollment_id   INTEGER PRIMARY KEY AUTOINCREMENT,
+    student_id      INTEGER NOT NULL REFERENCES Student(student_id) ON DELETE CASCADE,
+    course_id       INTEGER NOT NULL REFERENCES Course(course_id)   ON DELETE CASCADE,
+    UNIQUE(student_id, course_id)
+);
+
+-- 5. GRADE CATEGORIES  (e.g. Homework 20%, Tests 40%, Participation 10%, etc.)
+CREATE TABLE IF NOT EXISTS GradeCategory (
+    category_id     INTEGER PRIMARY KEY AUTOINCREMENT,
+    course_id       INTEGER NOT NULL REFERENCES Course(course_id) ON DELETE CASCADE,
+    category_name   TEXT    NOT NULL,
+    weight          REAL    NOT NULL CHECK(weight > 0 AND weight <= 100),
+    UNIQUE(course_id, category_name)
 );
