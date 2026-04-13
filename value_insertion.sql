@@ -23,7 +23,7 @@ INSERT OR IGNORE INTO Student(first_name, last_name, email) VALUES
   ('Divine',  'Jones',    'divine@uni.edu'),
   ('Grace',   'Kellies',  'grace@uni.edu'),
   ('Jamarri', 'Mezier',   'jamarri@uni.edu'),
-  ('Xavier',  'Green',    'xavier@uni.edu);
+  ('Xavier',  'Green',    'xavier@uni.edu');
 
 -- ── ENROLLMENTS ─────────────────────────────────
 -- CSCI 375 (course_id=1): all 7 students
