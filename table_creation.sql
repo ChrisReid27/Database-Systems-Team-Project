@@ -64,6 +64,6 @@ CREATE TABLE IF NOT EXISTS Score (
     score_id        INTEGER PRIMARY KEY AUTOINCREMENT,
     student_id      INTEGER NOT NULL REFERENCES Student(student_id)      ON DELETE CASCADE,
     assignment_id   INTEGER NOT NULL REFERENCES Assignment(assignment_id) ON DELETE CASCADE,
-    points_scored   REAL    NOT NULL CHECK(points_earned >= 0),
+    points_scored   REAL    NOT NULL CHECK(points_scored >= 0),
     UNIQUE(student_id, assignment_id)
 );
