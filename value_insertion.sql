@@ -38,7 +38,6 @@ INSERT OR IGNORE INTO Enrollment(student_id, course_id) VALUES
 INSERT OR IGNORE INTO Enrollment(student_id, course_id) VALUES
   (3,3),(4,3),(5,3),(6,3),(7,3);
 
-
 -- ── GRADE CATEGORIES ────────────────────────────
 -- CSCI 375: 15% participation, 20% HW, 15% Tests, 50% Projects
 INSERT OR IGNORE INTO GradeCategory(course_id, category_name, weight) VALUES
