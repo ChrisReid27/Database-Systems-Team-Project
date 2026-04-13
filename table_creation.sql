@@ -1,6 +1,6 @@
--- ==================================
--- GRADEBOOK DATABASE TABLE CREATION
--- ==================================
+-- ==========================================
+-- TASK 2: GRADEBOOK DATABASE TABLE CREATION
+-- ==========================================
 
 PRAGMA foreign_keys = ON;
 
