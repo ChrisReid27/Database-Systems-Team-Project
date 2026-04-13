@@ -1,0 +1,14 @@
+-- ==================================
+-- GRADEBOOK DATABASE TABLE CREATION
+-- ==================================
+
+PRAGMA foreign_keys = ON;
+
+-- 1. PROFESSOR
+-- One and only one professor can teach one or many courses.
+CREATE TABLE IF NOT EXISTS Professor (
+    professor_id  INTEGER PRIMARY KEY AUTOINCREMENT,
+    first_name    TEXT    NOT NULL,
+    last_name     TEXT    NOT NULL,
+    department    TEXT    NOT NULL
+);
