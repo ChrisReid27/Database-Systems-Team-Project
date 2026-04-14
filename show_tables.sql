@@ -2,9 +2,9 @@
 -- Task 3: Show Tables
 -- ====================
 
-SELECT * FROM Student;
-SELECT * FROM Course;
-SELECT * FROM Enrollment;
-SELECT * FROM GradeCategory;
-SELECT * FROM Assignment;
-SELECT * FROM Score;
+SELECT 'Students' AS TableName, * FROM Student;
+SELECT 'Courses' AS TableName, * FROM Course;
+SELECT 'Enrollments' AS TableName, * FROM Enrollment;
+SELECT 'Categories' AS TableName, * FROM GradeCategory;
+SELECT 'Assignments' AS TableName, * FROM Assignment;
+SELECT 'Scores' AS TableName, * FROM Score;
