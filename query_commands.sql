@@ -1,5 +1,5 @@
 -- =========
--- Tasks 1-12: Functionality Commands
+-- Tasks 4-12: Functionality Commands
 -- =========
 -- This file contains SQL commands that demonstrate the functionality of the database.
 -- Run these commands in the SQLite shell to see how the database works.

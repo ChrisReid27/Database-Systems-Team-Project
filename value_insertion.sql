@@ -1,5 +1,5 @@
 -- ==============================
--- TASK TWO: DATA FOR INSERTION
+-- TASK 2: DATA FOR INSERTION
 -- ==============================
 
 PRAGMA foreign_keys = ON;
