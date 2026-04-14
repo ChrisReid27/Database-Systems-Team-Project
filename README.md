@@ -13,6 +13,7 @@ This project implements a relational database to keep track of student grades fo
 * `show_tables.sql`: Commands to display table contents.
 * `query_commands.sql`: The SQL commands used to fulfill Tasks 4 through 12.
 * `Grade Book ER Diagram.drawio.pdf`: The Entity-Relationship diagram for the database.
+* `Gradebook Database Example Output.png`: An example of how the database would run from a terminal.
 
 
 ## Instructions to Compile and Execute
@@ -41,6 +42,11 @@ To run the automated test suite without manual interaction:
 2. Run the test script:
    `python3 test_gradebook.py`
 3. The test framework will spin up an isolated in-memory database, run the automated scenarios, and print a pass/fail report to the console.
+
+### Gradebook Example Output
+Examples shows the Main Menu, the user choosing task 3, and the start of the results for that command.
+
+![alt text](<Gradebook Database Example Output.png>)
 
 ---
 
